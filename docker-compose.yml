@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  mariadb:
+    build:
+      context: .
+      dockerfile: MariaDB/Dockerfile
+      args:
+        IMAGE_NAME: mariadb_test
+        TAG: latest  # or specify a specific tag if needed
+    image: my_ap:mariadb_test
+    container_name: mariadb-0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    networks:
+      custom_network:
+        ipv4_address: 172.22.0.2  # Specify the desired IP address here
+
+volumes:
+  mariadb_data:
+
+networks:
+  custom_network:
+    name: custom_dummy
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.22.0.0/16
