@@ -17,7 +17,7 @@
 | No | Task           | Description                                  | Analysis                                               | Status      |
 |----|----------------|----------------------------------------------|--------------------------------------------------------|-------------|
 | 1  | Deploy MariaDB | Simple MariaDB Deploy in a docker enviroment | Deploy MariaDB, login and create a dummy DB as a poc   | Done        |
-| 2  | DB Cration     | Create a Custom Image                        | that includes and executes a dummy DB creation Scripts | Ongoing     |
+| 2  | DB Creation    | Create a Custom Image                        | that includes and executes a dummy DB creation Scripts | Ongoing     |
 | 3  | DB Population  | Pupulate the DB with the data                | Include In the image the the data population           | Not Started |
 
 ## App Tasks (Not necessary, just for learning)

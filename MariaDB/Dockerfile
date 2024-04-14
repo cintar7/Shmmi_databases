@@ -10,11 +10,11 @@ RUN mkdir -p /var/run/mysqld/ && \
     chown -R mysql:mysql /var/run/mysqld/
 
 # Copy script to set up MariaDB configuration
-COPY setup-mariadb.sh /usr/local/bin/
+COPY MariaDB/setup-mariadb.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/setup-mariadb.sh
 
 # Copy SQL script into the container
-COPY grant_permissions.sql /docker-entrypoint-initdb.d/
+COPY MariaDB/grant_permissions.sql /docker-entrypoint-initdb.d/
 
 # Grant permissions during container initialization
 RUN chmod +r /docker-entrypoint-initdb.d/grant_permissions.sql

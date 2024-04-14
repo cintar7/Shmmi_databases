@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  mariadb:
+    build:
+      context: .
+      dockerfile: MariaDB/Dockerfile
+      args:
+        IMAGE_NAME: mariadb_test
+        TAG: latest  # or specify a specific tag if needed
+    image: my_ap:mariadb_test
+    container_name: mariadb-0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    networks:
+      custom_network:
+        ipv4_address: 172.22.0.2  # Specify the desired IP address here
+
+  phpmyadmin:
+    build:
+      context: .
+      dockerfile: PhpMyAdmin/Dockerfile
+      args:
+        IMAGE_NAME: phpmyadmin_test
+        TAG: latest  # or specify a specific tag if needed
+    image: my_ap:phpmyadmin_test
+    container_name: phpmyadmin_test-0
+    ports:
+      - "8080:80"
+    environment:
+      - "PMA_ARBITRARY=1"
+      - "PMA_HOST=172.22.0.2"  # Use the IP address of MariaDB container
+      - "PMA_PORT=3306"
+      - "MYSQL_ROOT_PASSWORD=root"
+ #   volumes:
+ #     - ./config.inc.php:/etc/phpmyadmin/config.inc.php  # Mount the configuration file
+    networks:
+      custom_network:
+        ipv4_address: 172.22.0.3  # Specify the desired IP address here for PHPMyAdmin
+
+volumes:
+  mariadb_data:
+
+networks:
+  custom_network:
+    name: custom_dummy
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.22.0.0/16
