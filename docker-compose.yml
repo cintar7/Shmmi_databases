@@ -4,20 +4,20 @@ version: '3.8'
 
 services:
 
-  app:
-    build:
-      context: .
-      dockerfile: App/Dockerfile
-      args:
-        IMAGE_NAME: app_test
-        TAG: latest  # or specify a specific tag if needed
-    image: my_ap:app_test
-    container_name: app-0
-    ports:
-      - "8089:8089"
-    networks:
-      custom_network:
-        ipv4_address: 172.22.0.4  # Specify the desired IP address here
+#  app:
+#    build:
+#      context: .
+#      dockerfile: App/Dockerfile
+##      args:
+ #       IMAGE_NAME: app_test
+#        TAG: latest  # or specify a specific tag if needed
+#    image: my_ap:app_test
+#    container_name: app-0
+#    ports:
+#      - "8089:8089"
+#    networks:
+#      custom_network:
+#        ipv4_address: 172.22.0.4  # Specify the desired IP address here
 
   mariadb:
     build:
