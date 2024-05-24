@@ -14,9 +14,25 @@ COPY MariaDB/setup-mariadb.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/setup-mariadb.sh
 
 # Copy SQL script into the container
+COPY MariaDB/DATA/cooks.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/episodeparticipations.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/episodes.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/equipment.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/foodgroups.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/images.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/ingredients.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/recipeequipment.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/recipeingredients.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/recipes.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/recipethematicunits.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/scores.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/steps.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/thematicunits.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/users.csv /docker-entrypoint-initdb.d/
 COPY MariaDB/01_grant_permissions.sql /docker-entrypoint-initdb.d/
 COPY MariaDB/02_db.sql /docker-entrypoint-initdb.d/
 # Grant permissions during container initialization
+RUN chmod +x /docker-entrypoint-initdb.d/*.csv
 RUN chmod +r /docker-entrypoint-initdb.d/01_grant_permissions.sql
 RUN chmod +r /docker-entrypoint-initdb.d/02_db.sql
 # Expose port 3306
