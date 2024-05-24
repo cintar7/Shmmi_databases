@@ -13,30 +13,41 @@ RUN mkdir -p /var/run/mysqld/ && \
 COPY MariaDB/setup-mariadb.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/setup-mariadb.sh
 
+# Set MariaDB configuration to allow external connections
 # Copy SQL script into the container
-COPY MariaDB/DATA/cooks.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/episodeparticipations.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/episodes.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/equipment.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/foodgroups.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/images.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/ingredients.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/recipeequipment.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/recipeingredients.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/recipes.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/recipethematicunits.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/scores.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/steps.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/thematicunits.csv /docker-entrypoint-initdb.d/
-COPY MariaDB/DATA/users.csv /docker-entrypoint-initdb.d/
+COPY MariaDB/DATA/cooks.csv /tmp/
+COPY MariaDB/DATA/episodeparticipations.csv /tmp/
+COPY MariaDB/DATA/episodes.csv /tmp/
+COPY MariaDB/DATA/equipment.csv /tmp/
+COPY MariaDB/DATA/foodgroups.csv /tmp/
+COPY MariaDB/DATA/images.csv /tmp/
+COPY MariaDB/DATA/ingredients.csv /tmp/
+COPY MariaDB/DATA/recipeequipment.csv /tmp/
+COPY MariaDB/DATA/recipeingredients.csv /tmp/
+COPY MariaDB/DATA/recipes.csv /tmp/
+COPY MariaDB/DATA/recipethematicunits.csv /tmp/
+COPY MariaDB/DATA/scores.csv /tmp/
+COPY MariaDB/DATA/steps.csv /tmp/
+COPY MariaDB/DATA/thematicunits.csv /tmp/
+COPY MariaDB/DATA/users.csv /tmp/
 COPY MariaDB/01_grant_permissions.sql /docker-entrypoint-initdb.d/
 COPY MariaDB/02_db.sql /docker-entrypoint-initdb.d/
+COPY MariaDB/03_populate.sql /docker-entrypoint-initdb.d/
 # Grant permissions during container initialization
-RUN chmod +x /docker-entrypoint-initdb.d/*.csv
-RUN chmod +r /docker-entrypoint-initdb.d/01_grant_permissions.sql
-RUN chmod +r /docker-entrypoint-initdb.d/02_db.sql
+RUN chmod +rx /tmp/*.csv
+RUN chmod +rx /docker-entrypoint-initdb.d/01_grant_permissions.sql
+RUN chmod +rx /docker-entrypoint-initdb.d/02_db.sql
+RUN chmod +rx /docker-entrypoint-initdb.d/03_populate.sql
+
 # Expose port 3306
 EXPOSE 3306
 
-# Start MariaDB server by executing the setup script and then mysqld
-CMD ["bash", "-c", "/usr/local/bin/setup-mariadb.sh && exec mysqld"]
+# Start the MariaDB server, run initialization scripts, then stop the server
+RUN service mysql start && \
+    mysql -u root -e "CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY 'root'; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION; FLUSH PRIVILEGES;" && \
+    mysql -u root -proot < /docker-entrypoint-initdb.d/01_grant_permissions.sql && \
+    mysql -u root -proot < /docker-entrypoint-initdb.d/02_db.sql && \
+    mysql -u root -proot < /docker-entrypoint-initdb.d/03_populate.sql && \
+    service mysql stop
+# Start MariaDB server
+CMD ["bash", "-c", "/usr/local/bin/setup-mariadb.sh && mysqld"]
