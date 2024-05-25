@@ -9,6 +9,7 @@ skip-name-resolve
 user = mysql
 datadir = /var/lib/mysql
 socket = /var/run/mysqld/mysqld.sock
+local-infile=1
 
 [client]
 host = localhost
