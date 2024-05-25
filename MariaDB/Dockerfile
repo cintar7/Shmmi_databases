@@ -30,6 +30,7 @@ COPY MariaDB/DATA/scores.csv /tmp/
 COPY MariaDB/DATA/steps.csv /tmp/
 COPY MariaDB/DATA/thematicunits.csv /tmp/
 COPY MariaDB/DATA/users.csv /tmp/
+COPY MariaDB/DATA/nutritionalinfo.csv /tmp/
 COPY MariaDB/01_grant_permissions.sql /docker-entrypoint-initdb.d/
 COPY MariaDB/02_db.sql /docker-entrypoint-initdb.d/
 COPY MariaDB/03_populate.sql /docker-entrypoint-initdb.d/
@@ -46,8 +47,10 @@ EXPOSE 3306
 RUN service mysql start && \
     mysql -u root -e "CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY 'root'; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION; FLUSH PRIVILEGES;" && \
     mysql -u root -proot < /docker-entrypoint-initdb.d/01_grant_permissions.sql && \
-    mysql -u root -proot < /docker-entrypoint-initdb.d/02_db.sql && \
-    mysql -u root -proot < /docker-entrypoint-initdb.d/03_populate.sql && \
+    mysql --local-infile=1 -u root -proot < /docker-entrypoint-initdb.d/02_db.sql && \
+    mysql --local-infile=1 -u root -proot < /docker-entrypoint-initdb.d/03_populate.sql && \
     service mysql stop
 # Start MariaDB server
 CMD ["bash", "-c", "/usr/local/bin/setup-mariadb.sh && mysqld"]
+
+

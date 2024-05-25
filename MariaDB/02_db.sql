@@ -1,8 +1,8 @@
 -- Create the dummy database
-CREATE DATABASE IF NOT EXISTS dummy;
+CREATE DATABASE IF NOT EXISTS dummy1;
 
 -- Use the dummy database
-USE dummy;
+USE dummy1;
 
 CREATE TABLE IF NOT EXISTS `User` (
                                       `UserID` int NOT NULL DEFAULT '0',
@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `EpisodeParticipation` (
                                                       `EpisodeID` int NOT NULL,
                                                       `CookID` int,
                                                       `RecipeID` int,
-                                                      `Role` varchar(255) DEFAULT '255',
+                                                      `Role` varchar(255) DEFAULT 'Assistant',
                                                       PRIMARY KEY (`EpisodeID`)
 );
 
@@ -167,6 +167,45 @@ ALTER TABLE `Score` ADD CONSTRAINT `Score_fk0` FOREIGN KEY (`EpisodeID`) REFEREN
 ALTER TABLE `Score` ADD CONSTRAINT `Score_fk1` FOREIGN KEY (`CookID`) REFERENCES `Cook`(`CookID`);
 
 ALTER TABLE `Score` ADD CONSTRAINT `Score_fk2` FOREIGN KEY (`JudgeID`) REFERENCES `Cook`(`CookID`);
+
+
+CREATE INDEX idx_username ON User (Username);
+CREATE INDEX idx_recipe_name ON Recipe (Name);
+CREATE INDEX idx_recipe_national_cuisine ON Recipe (NationalCuisine);
+CREATE INDEX idx_recipe_difficulty_level ON Recipe (DifficultyLevel);
+CREATE INDEX idx_recipe_main_ingredient_id ON Recipe (MainIngredientID);
+CREATE INDEX idx_recipe_nutritional_info_id ON Recipe (NutritionalInfoID);
+CREATE INDEX idx_step_recipe_id ON Step (RecipeID);
+CREATE INDEX idx_step_step_number ON Step (StepNumber);
+CREATE INDEX idx_ingredient_name ON Ingredient (Name);
+CREATE INDEX idx_ingredient_food_group_id ON Ingredient (FoodGroupID);
+CREATE INDEX idx_food_group_name ON FoodGroup (Name);
+CREATE INDEX idx_recipe_ingredient_recipe_id ON RecipeIngredient (RecipeID);
+CREATE INDEX idx_recipe_ingredient_ingredient_id ON RecipeIngredient (IngredientID);
+CREATE INDEX idx_equipment_name ON Equipment (Name);
+CREATE INDEX idx_recipe_equipment_recipe_id ON RecipeEquipment (RecipeID);
+CREATE INDEX idx_recipe_equipment_equipment_id ON RecipeEquipment (EquipmentID);
+CREATE INDEX idx_nutritional_info_fat ON NutritionalInfo (FatPerServing);
+CREATE INDEX idx_nutritional_info_protein ON NutritionalInfo (ProteinPerServing);
+CREATE INDEX idx_nutritional_info_carbs ON NutritionalInfo (CarbsPerServing);
+CREATE INDEX idx_nutritional_info_calories ON NutritionalInfo (CaloriesPerServing);
+CREATE INDEX idx_thematic_unit_name ON ThematicUnit (Name);
+CREATE INDEX idx_recipe_thematic_unit_recipe_id ON RecipeThematicUnit (RecipeID);
+CREATE INDEX idx_recipe_thematic_unit_thematic_unit_id ON RecipeThematicUnit (ThematicUnitID);
+CREATE INDEX idx_cook_first_name ON Cook (FirstName);
+CREATE INDEX idx_cook_last_name ON Cook (LastName);
+CREATE INDEX idx_cook_specialization ON Cook (Specialization);
+CREATE INDEX idx_cook_qualification ON Cook (Qualification);
+CREATE INDEX idx_episode_number ON Episode (EpisodeNumber);
+CREATE INDEX idx_episode_year ON Episode (Year);
+CREATE INDEX idx_episode_participation_episode_id ON EpisodeParticipation (EpisodeID);
+CREATE INDEX idx_episode_participation_cook_id ON EpisodeParticipation (CookID);
+CREATE INDEX idx_episode_participation_recipe_id ON EpisodeParticipation (RecipeID);
+CREATE INDEX idx_score_episode_id ON Score (EpisodeID);
+CREATE INDEX idx_score_cook_id ON Score (CookID);
+CREATE INDEX idx_score_judge_id ON Score (JudgeID);
+CREATE INDEX idx_image_entity_type ON Image (EntityType);
+CREATE INDEX idx_image_entity_id ON Image (EntityID);
 
 
 
