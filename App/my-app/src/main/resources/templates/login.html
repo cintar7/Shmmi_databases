@@ -4,15 +4,14 @@
     <title>Login</title>
 </head>
 <body>
-<h2>Login</h2>
 <form th:action="@{/login}" method="post">
     <div>
-        <label>Username:</label>
-        <input type="text" name="username" />
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username"/>
     </div>
     <div>
-        <label>Password:</label>
-        <input type="password" name="password" />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password"/>
     </div>
     <div>
         <button type="submit">Login</button>
@@ -20,3 +19,4 @@
 </form>
 </body>
 </html>
+
