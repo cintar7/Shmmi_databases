@@ -1,51 +1,137 @@
 IngredientID,Name,FoodGroupID
-1,Ingredient1,2
-2,Ingredient2,3
-3,Ingredient3,4
-4,Ingredient4,5
-5,Ingredient5,6
-6,Ingredient6,7
-7,Ingredient7,8
-8,Ingredient8,9
-9,Ingredient9,10
-10,Ingredient10,1
-11,Ingredient11,2
-12,Ingredient12,3
-13,Ingredient13,4
-14,Ingredient14,5
-15,Ingredient15,6
-16,Ingredient16,7
-17,Ingredient17,8
-18,Ingredient18,9
-19,Ingredient19,10
-20,Ingredient20,1
-21,Ingredient21,2
-22,Ingredient22,3
-23,Ingredient23,4
-24,Ingredient24,5
-25,Ingredient25,6
-26,Ingredient26,7
-27,Ingredient27,8
-28,Ingredient28,9
-29,Ingredient29,10
-30,Ingredient30,1
-31,Ingredient31,2
-32,Ingredient32,3
-33,Ingredient33,4
-34,Ingredient34,5
-35,Ingredient35,6
-36,Ingredient36,7
-37,Ingredient37,8
-38,Ingredient38,9
-39,Ingredient39,10
-40,Ingredient40,1
-41,Ingredient41,2
-42,Ingredient42,3
-43,Ingredient43,4
-44,Ingredient44,5
-45,Ingredient45,6
-46,Ingredient46,7
-47,Ingredient47,8
-48,Ingredient48,9
-49,Ingredient49,10
-50,Ingredient50,1
+1,Tomato,9
+2,Chicken,1
+3,Beef,1
+4,Olive oil,3
+5,Orange,4
+6,Potato,9
+7,Eggplant,9
+8,Flour,8
+9,Lentils,7
+10,Beans,7
+11,Cheddar,5
+12,Feta,5
+13,Redfish,2
+14,Octopus,2
+15,Sugar,10
+16,Glucose syrup,10
+17,Vodka,6
+18,Chocolate,10
+19,Apple,4
+20,Pork belly,1
+21,Sunflower oil,3
+22,Milk,5
+23,Egg,1
+24,Pasta,11
+25,Corn Flakes,8
+26,Rice,11
+27,Banana,4
+28,Celery,9
+29,Onion,9
+30,Mussels,2
+31,Ginger,9
+32,Garlic,9
+33,Cucumber,9
+34,Spinach,9
+35,Carrot,9
+36,Peas,7
+37,Turkey,1
+38,Lamb,1
+39,Shrimp,2
+40,Tuna,2
+41,Salmon,2
+42,Basil,9
+43,Oregano,9
+44,Thyme,9
+45,Parsley,9
+46,Butter,5
+47,Yogurt,5
+48,Parmesan,5
+49,Mozzarella,5
+50,Provolone,5
+51,Cream,5
+52,Blue cheese,5
+53,Pineapple,4
+54,Strawberry,4
+55,Blueberry,4
+56,Mango,4
+57,Avocado,4
+58,Coconut,4
+59,Lime,4
+60,Lemon,4
+61,Bacon,1
+62,Prosciutto,1
+63,Duck,1
+64,Rabbit,1
+65,Goose,1
+66,Bread,8
+67,Quinoa,8
+68,Oats,8
+69,Barley,8
+70,Bulgur,8
+71,Chickpeas,7
+72,Black beans,7
+73,Tofu,7
+74,Tempeh,7
+75,Almonds,10
+76,Walnuts,10
+77,Pistachios,10
+78,Cashews,10
+79,Pecans,10
+80,Peanuts,10
+81,Macadamia nuts,10
+82,Chia seeds,10
+83,Flax seeds,10
+84,Hemp seeds,10
+85,Pumpkin seeds,10
+86,Sunflower seeds,10
+87,Sesame seeds,10
+88,Poppy seeds,10
+89,Caraway seeds,10
+90,Dill,9
+91,Cilantro,9
+92,Chives,9
+93,Scallions,9
+94,Shallots,9
+95,Leeks,9
+96,Zucchini,9
+97,Yellow squash,9
+98,Butternut squash,9
+99,Acorn squash,9
+100,Turnip,9
+101,Parsnip,9
+102,Beet,9
+103,Radish,9
+104,Brussels sprouts,9
+105,Broccoli,9
+106,Cauliflower,9
+107,Kale,9
+108,Swiss chard,9
+109,Collard greens,9
+110,Mustard greens,9
+111,Artichoke,9
+112,Asparagus,9
+113,Bamboo shoots,9
+114,Bok choy,9
+115,Bell pepper,9
+116,Chili pepper,9
+117,Jalapeno,9
+118,Habanero,9
+119,Horseradish,9
+120,Jicama,9
+121,Kimchi,9
+122,Kohlrabi,9
+123,Lotus root,9
+124,Okra,9
+125,Radicchio,9
+126,Rutabaga,9
+127,Shiso,9
+128,Snow peas,9
+129,Sorrel,9
+130,Tomatillo,9
+131,Watercress,9
+132,Yucca,9
+133,Zaatar,9
+134,Zest (Lemon),10
+135,Zest (Orange),10
+

@@ -1,51 +1,21 @@
 ThematicUnitID,Name,Description
-1,Unit1,Description1
-2,Unit2,Description2
-3,Unit3,Description3
-4,Unit4,Description4
-5,Unit5,Description5
-6,Unit6,Description6
-7,Unit7,Description7
-8,Unit8,Description8
-9,Unit9,Description9
-10,Unit10,Description10
-11,Unit11,Description11
-12,Unit12,Description12
-13,Unit13,Description13
-14,Unit14,Description14
-15,Unit15,Description15
-16,Unit16,Description16
-17,Unit17,Description17
-18,Unit18,Description18
-19,Unit19,Description19
-20,Unit20,Description20
-21,Unit21,Description21
-22,Unit22,Description22
-23,Unit23,Description23
-24,Unit24,Description24
-25,Unit25,Description25
-26,Unit26,Description26
-27,Unit27,Description27
-28,Unit28,Description28
-29,Unit29,Description29
-30,Unit30,Description30
-31,Unit31,Description31
-32,Unit32,Description32
-33,Unit33,Description33
-34,Unit34,Description34
-35,Unit35,Description35
-36,Unit36,Description36
-37,Unit37,Description37
-38,Unit38,Description38
-39,Unit39,Description39
-40,Unit40,Description40
-41,Unit40,Description41
-42,Unit40,Description42
-43,Unit40,Description43
-44,Unit40,Description44
-45,Unit45,Description45
-46,Unit45,Description46
-47,Unit47,Description47
-48,Unit48,Description48
-49,Unit49,Description49
-50,Unit50,Description50
+1,Sweet recipe,Includes lots of sugar
+2,Recipe with meat,Includes meat
+3,Vegan,Does not include meat or products of it
+4,Vegetarian,Does not include meat
+5,Pescetarian,Includes fish
+6,Recipe of the village,Traditional recipes
+7,Quick and Easy,Recipes that can be made quickly
+8,Comfort Food,Hearty and satisfying dishes
+9,Festive,Recipes for holidays and celebrations
+10,Healthy,Low-calorie and nutritious recipes
+11,Budget-Friendly,Recipes that are inexpensive to make
+12,Kid-Friendly,Recipes that children will love
+13,Spicy,Recipes with a lot of spices
+14,Gluten-Free,Recipes without gluten
+15,Dairy-Free,Recipes without dairy products
+16,Low-Carb,Recipes with low carbohydrate content
+17,High-Protein,Recipes rich in protein
+18,Seasonal,Recipes using seasonal ingredients
+19,International Cuisine,Recipes from around the world
+20,Party Food,Recipes perfect for parties and gatherings

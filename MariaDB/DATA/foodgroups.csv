@@ -1,11 +1,12 @@
 FoodGroupID,Name,Description
-1,FoodGroup1,Description1
-2,FoodGroup2,Description2
-3,FoodGroup3,Description3
-4,FoodGroup4,Description4
-5,FoodGroup5,Description5
-6,FoodGroup6,Description6
-7,FoodGroup7,Description7
-8,FoodGroup8,Description8
-9,FoodGroup9,Description9
-10,FoodGroup10,Description10
+1,Meat,Protein Based
+2,Fish,Seafood protein based
+3,Fats,Includes oils
+4,Fruits,healthy snack
+5,Dairy,Includes milk cheese yogurt
+6,Drinks,stuff to drink with your cigarette
+7,Legumes,healthy choice for protein
+8,Cereals,includes flour etc
+9,Vegetables,healthy choice 
+10,Sugars,one's in the lips forever on the hips
+11,Carbons,eg pasta and rice

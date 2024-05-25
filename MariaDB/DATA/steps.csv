@@ -1,51 +1,155 @@
 StepID,RecipeID,StepNumber,Description
-1,1,1,Step1 Description for Recipe1
-2,2,1,Step1 Description for Recipe2
-3,3,1,Step1 Description for Recipe3
-4,4,1,Step1 Description for Recipe4
-5,5,1,Step1 Description for Recipe5
-6,6,1,Step1 Description for Recipe6
-7,7,1,Step1 Description for Recipe7
-8,8,1,Step1 Description for Recipe8
-9,9,1,Step1 Description for Recipe9
-10,10,1,Step1 Description for Recipe10
-11,11,1,Step1 Description for Recipe11
-12,12,1,Step1 Description for Recipe12
-13,13,1,Step1 Description for Recipe13
-14,14,1,Step1 Description for Recipe14
-15,15,1,Step1 Description for Recipe15
-16,16,1,Step1 Description for Recipe16
-17,17,1,Step1 Description for Recipe17
-18,18,1,Step1 Description for Recipe18
-19,19,1,Step1 Description for Recipe19
-20,20,1,Step1 Description for Recipe20
-21,21,1,Step1 Description for Recipe21
-22,22,1,Step1 Description for Recipe22
-23,23,1,Step1 Description for Recipe23
-24,24,1,Step1 Description for Recipe24
-25,25,1,Step1 Description for Recipe25
-26,26,1,Step1 Description for Recipe26
-27,27,1,Step1 Description for Recipe27
-28,28,1,Step1 Description for Recipe28
-29,29,1,Step1 Description for Recipe29
-30,30,1,Step1 Description for Recipe30
-31,31,1,Step1 Description for Recipe31
-32,32,1,Step1 Description for Recipe32
-33,33,1,Step1 Description for Recipe33
-34,34,1,Step1 Description for Recipe34
-35,35,1,Step1 Description for Recipe35
-36,36,1,Step1 Description for Recipe36
-37,37,1,Step1 Description for Recipe37
-38,38,1,Step1 Description for Recipe38
-39,39,1,Step1 Description for Recipe39
-40,40,1,Step1 Description for Recipe40
-41,41,1,Step1 Description for Recipe41
-42,42,1,Step1 Description for Recipe42
-43,43,1,Step1 Description for Recipe43
-44,44,1,Step1 Description for Recipe44
-45,45,1,Step1 Description for Recipe45
-46,46,1,Step1 Description for Recipe46
-47,47,1,Step1 Description for Recipe47
-48,48,1,Step1 Description for Recipe48
-49,49,1,Step1 Description for Recipe49
-50,50,1,Step1 Description for Recipe50
+1,1,1,Make the dough
+2,1,2,Apply tomato sauce and cheese
+3,1,3,Add bacon and ham
+4,1,4,Bake in oven for 30 minutes
+5,2,1,Cook the pasta
+6,2,2,Make the carbonara sauce
+7,2,3,Incorporate the pasta with the sauce
+8,3,1,Prepare the risotto
+9,3,2,Form the risotto into balls
+10,3,3,Deep fry the balls
+11,4,1,Prepare the tortilla shells
+12,4,2,Prepare the fillings
+13,4,3,Assemble the tacos
+14,5,1,Prepare the burrito fillings
+15,5,2,Assemble the burrito
+16,5,3,Deep fry the burrito
+17,6,1,Prepare the beef patty
+18,6,2,Cook the beef patty
+19,6,3,Assemble the burger
+20,7,1,Prepare the sushi rice
+21,7,2,Slice the fish
+22,7,3,Assemble the sushi
+23,8,1,Prepare the seafood
+24,8,2,Cook the rice
+25,8,3,Combine the rice and seafood
+26,9,1,Soak the chickpeas
+27,9,2,Blend the chickpeas
+28,9,3,Form the mixture into balls
+29,9,4,Deep fry the balls
+30,10,1,Marinate the meat
+31,10,2,Cook the meat
+32,10,3,Assemble the shawarma
+33,11,1,Slice the vegetables
+34,11,2,Layer the vegetables in a dish
+35,11,3,Bake the dish
+36,12,1,Prepare the pie crust
+37,12,2,Make the egg and cheese filling
+38,12,3,Bake the pie
+39,13,1,Prepare the noodles
+40,13,2,Make the sauce
+41,13,3,Combine the noodles and sauce
+42,14,1,Prepare the broth
+43,14,2,Add the spices
+44,14,3,Cook the soup
+45,15,1,Fry the potatoes
+46,15,2,Prepare the gravy
+47,15,3,Combine the potatoes and gravy
+48,16,1,Prepare the cabbage
+49,16,2,Ferment the cabbage
+50,17,1,Cook the rice
+51,17,2,Prepare the toppings
+52,17,3,Assemble the bibimbap
+53,18,1,Prepare the eggplant
+54,18,2,Layer the ingredients in a dish
+55,18,3,Bake the dish
+56,19,1,Marinate the meat
+57,19,2,Cook the meat
+58,19,3,Assemble the gyro
+59,20,1,Prepare the chicken
+60,20,2,Make the creamy sauce
+61,20,3,Cook the chicken in the sauce
+62,21,1,Prepare the spinach
+63,21,2,Make the paneer
+64,21,3,Cook the spinach and paneer together
+65,22,1,Cook the sausage
+66,22,2,Make the curry sauce
+67,22,3,Combine the sausage and sauce
+68,23,1,Marinate the meat
+69,23,2,Cook the meat
+70,23,3,Prepare the sauce
+71,24,1,Prepare the dim sum fillings
+72,24,2,Wrap the fillings in dough
+73,24,3,Steam the dim sum
+74,25,1,Prepare the duck
+75,25,2,Roast the duck
+76,25,3,Prepare the pancakes
+77,26,1,Soak the black beans
+78,26,2,Cook the beans
+79,26,3,Combine the beans with other ingredients
+80,27,1,Prepare the chocolate mixture
+81,27,2,Form the mixture into balls
+82,27,3,Roll the balls in sprinkles
+83,28,1,Prepare the fish
+84,28,2,Marinate the fish in lime juice
+85,28,3,Serve the ceviche
+86,29,1,Slice the beef
+87,29,2,Stir-fry the beef
+88,29,3,Combine the beef with other ingredients
+89,30,1,Marinate the meat
+90,30,2,Cook the meat
+91,30,3,Prepare the sauce
+92,31,1,Prepare the pig
+93,31,2,Roast the pig
+94,31,3,Carve the meat
+95,32,1,Marinate the meat
+96,32,2,Grill the meat
+97,32,3,Serve with flatbread
+98,33,1,Prepare the dough
+99,33,2,Layer the dough with syrup and nuts
+100,33,3,Bake the baklava
+101,34,1,Prepare the meat
+102,34,2,Cook the meat
+103,34,3,Add paprika and other spices
+104,35,1,Prepare the cake layers
+105,35,2,Layer the cake with caramel
+106,35,3,Caramelize the top layer
+107,36,1,Cook the meat
+108,36,2,Prepare the mashed potatoes
+109,36,3,Layer the meat and potatoes in a dish
+110,37,1,Prepare the fish
+111,37,2,Fry the fish and potatoes
+112,37,3,Serve with malt vinegar
+113,38,1,Prepare the beets
+114,38,2,Cook the beets
+115,38,3,Make the soup
+116,39,1,Prepare the batter
+117,39,2,Cook the pancakes
+118,39,3,Serve with caviar or jam
+119,40,1,Prepare the seafood
+120,40,2,Cook the noodles
+121,40,3,Combine the noodles and seafood
+122,41,1,Cook the rice
+123,41,2,Fry the rice
+124,41,3,Top with a fried egg
+125,42,1,Marinate the meat
+126,42,2,Grill the meat
+127,42,3,Serve with peanut sauce
+128,43,1,Prepare the meringue
+129,43,2,Bake the meringue
+130,43,3,Top with fresh fruit
+131,44,1,Prepare the pastry dough
+132,44,2,Fill the pastry with meat
+133,44,3,Bake the meat pie
+134,45,1,Soak the chickpeas
+135,45,2,Blend the chickpeas with other ingredients
+136,45,3,Serve with olive oil
+137,46,1,Prepare the tomato sauce
+138,46,2,Poach the eggs in the sauce
+139,46,3,Serve with crusty bread
+140,47,1,Prepare the meat and peppers
+141,47,2,Grill the meat and peppers
+142,47,3,Serve with tortillas
+143,48,1,Prepare the fillings
+144,48,2,Assemble the burrito
+145,48,3,Wrap tightly
+146,49,1,Prepare the noodles
+147,49,2,Cook the broth
+148,49,3,Combine the noodles and broth
+149,50,1,Prepare the seafood
+150,50,2,Batter the seafood
+151,50,3,Fry the seafood
+152,51,1,Prepare the rice dough
+153,51,2,Fill the dough with sweet red bean paste
+154,51,3,Form into balls
