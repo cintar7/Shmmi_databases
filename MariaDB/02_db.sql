@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS `User` (
                                       `Password` varchar(255) NOT NULL DEFAULT '255',
                                       `UserType` varchar(255) NOT NULL DEFAULT '255',
                                       PRIMARY KEY (`UserID`)
+
 );
 
 CREATE TABLE IF NOT EXISTS `Recipe` (
