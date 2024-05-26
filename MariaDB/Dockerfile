@@ -3,6 +3,7 @@ FROM ubuntu:20.04
 # Install MariaDB Server
 RUN apt-get update && \
     apt-get install -y mariadb-server && \
+    apt-get install -y vim && \
     rm -rf /var/lib/apt/lists/*
 
 # Create directory for socket file
@@ -36,6 +37,8 @@ COPY MariaDB/01_grant_permissions.sql /docker-entrypoint-initdb.d/
 COPY MariaDB/02_db.sql /docker-entrypoint-initdb.d/
 COPY MariaDB/03_populate.sql /docker-entrypoint-initdb.d/
 COPY MariaDB/05_queries.sql /docker-entrypoint-initdb.d/
+COPY MariaDB/04_user_perm.sql /docker-entrypoint-initdb.d/
+
 RUN mkdir -p /tmp/Queries/
 COPY MariaDB/Queries/* /tmp/Queries/
 
@@ -45,6 +48,7 @@ RUN chmod +rx /docker-entrypoint-initdb.d/01_grant_permissions.sql
 RUN chmod +rx /docker-entrypoint-initdb.d/02_db.sql
 RUN chmod +rx /docker-entrypoint-initdb.d/03_populate.sql
 RUN chmod +rx /docker-entrypoint-initdb.d/05_queries.sql
+RUN chmod +rx /docker-entrypoint-initdb.d/04_user_perm.sql
 RUN chmod +rx /tmp/Queries/*
 
 # Expose port 3306
@@ -56,6 +60,7 @@ RUN service mysql start && \
     mysql -u root -proot < /docker-entrypoint-initdb.d/01_grant_permissions.sql && \
     mysql --local-infile=1 -u root -proot < /docker-entrypoint-initdb.d/02_db.sql && \
     mysql --local-infile=1 -u root -proot < /docker-entrypoint-initdb.d/03_populate.sql && \
+    mysql --local-infile=1 -u root -proot < /docker-entrypoint-initdb.d/04_user_perm.sql && \
     bash /tmp/Queries/Queri.sh &&\
     service mysql stop
 # Start MariaDB server
