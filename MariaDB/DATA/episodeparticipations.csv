@@ -1,18 +1,501 @@
-EpisodeID,CookID,RecipeID,Role
-1,1,45,Chef
-1,2,45,Chef
-2,1,45,Chef
-2,2,46,Chef
-3,1,45,Chef
-3,2,45,Chef
-10,1,45,Chef
-10,2,45,Chef
-11,3,45,Chef
-11,2,45,Chef
-12,1,45,Chef
-12,2,45,Chef
-
-
-
-
-
+pID,EpisodeID,CookID,RecipeID,Role
+1,1,41,8,Chef
+2,1,8,15,Sous Chef
+3,1,2,3,First Cook
+4,1,48,28,Line Cook
+5,1,18,17,Pastry Chef
+6,1,16,25,Grill Cook
+7,1,15,19,Sauce Chef
+8,1,9,7,Fish Chef
+9,1,7,41,Vegetable Chef
+10,1,44,12,Roundsman
+11,2,10,5,Chef
+12,2,14,6,Sous Chef
+13,2,49,4,First Cook
+14,2,22,1,Line Cook
+15,2,6,9,Pastry Chef
+16,2,25,13,Grill Cook
+17,2,23,10,Sauce Chef
+18,2,55,33,Fish Chef
+19,2,39,14,Vegetable Chef
+20,2,17,11,Roundsman
+21,3,30,32,Chef
+22,3,54,16,Sous Chef
+23,3,24,27,First Cook
+24,3,11,31,Line Cook
+25,3,43,24,Pastry Chef
+26,3,45,20,Grill Cook
+27,3,60,30,Sauce Chef
+28,3,42,18,Fish Chef
+29,3,5,21,Vegetable Chef
+30,3,35,22,Roundsman
+31,4,9,26,Chef
+32,4,16,40,Sous Chef
+33,4,48,50,First Cook
+34,4,36,34,Line Cook
+35,4,38,29,Pastry Chef
+36,4,28,39,Grill Cook
+37,4,58,2,Sauce Chef
+38,4,26,23,Fish Chef
+39,4,15,47,Vegetable Chef
+40,4,33,3,Roundsman
+41,5,1,7,Chef
+42,5,47,9,Sous Chef
+43,5,57,28,First Cook
+44,5,17,33,Line Cook
+45,5,49,1,Pastry Chef
+46,5,12,17,Grill Cook
+47,5,59,25,Sauce Chef
+48,5,7,8,Fish Chef
+49,5,56,30,Vegetable Chef
+50,5,41,4,Roundsman
+51,6,43,19,Chef
+52,6,31,10,Sous Chef
+53,6,11,13,First Cook
+54,6,34,27,Line Cook
+55,6,39,5,Pastry Chef
+56,6,14,6,Grill Cook
+57,6,60,3,Sauce Chef
+58,6,35,24,Fish Chef
+59,6,45,2,Vegetable Chef
+60,6,13,20,Roundsman
+61,7,33,9,Chef
+62,7,16,25,Sous Chef
+63,7,18,10,First Cook
+64,7,32,18,Line Cook
+65,7,9,8,Pastry Chef
+66,7,37,3,Grill Cook
+67,7,51,13,Sauce Chef
+68,7,52,17,Fish Chef
+69,7,27,30,Vegetable Chef
+70,7,28,39,Roundsman
+71,8,56,47,Chef
+72,8,26,50,Sous Chef
+73,8,58,7,First Cook
+74,8,4,4,Line Cook
+75,8,25,41,Pastry Chef
+76,8,1,28,Grill Cook
+77,8,17,25,Sauce Chef
+78,8,30,18,Fish Chef
+79,8,19,13,Vegetable Chef
+80,8,47,33,Roundsman
+81,9,38,2,Chef
+82,9,39,12,Sous Chef
+83,9,3,1,First Cook
+84,9,40,24,Line Cook
+85,9,6,9,Pastry Chef
+86,9,43,19,Grill Cook
+87,9,34,10,Sauce Chef
+88,9,21,3,Fish Chef
+89,9,60,31,Vegetable Chef
+90,9,14,27,Roundsman
+91,10,11,22,Chef
+92,10,29,23,Sous Chef
+93,10,54,30,First Cook
+94,10,35,4,Line Cook
+95,10,46,7,Pastry Chef
+96,10,20,8,Grill Cook
+97,10,52,10,Sauce Chef
+98,10,42,2,Fish Chef
+99,10,53,21,Vegetable Chef
+100,10,36,17,Roundsman
+101,11,50,1,Chef
+102,11,9,13,Sous Chef
+103,11,41,19,First Cook
+104,11,17,12,Line Cook
+105,11,48,31,Pastry Chef
+106,11,28,27,Grill Cook
+107,11,1,30,Sauce Chef
+108,11,8,24,Fish Chef
+109,11,5,10,Vegetable Chef
+110,11,57,9,Roundsman
+111,12,12,8,Chef
+112,12,27,3,Sous Chef
+113,12,2,18,First Cook
+114,12,60,25,Line Cook
+115,12,22,28,Pastry Chef
+116,12,51,41,Grill Cook
+117,12,43,17,Sauce Chef
+118,12,56,13,Fish Chef
+119,12,16,33,Vegetable Chef
+120,12,18,4,Roundsman
+121,13,23,12,Chef
+122,13,42,24,Sous Chef
+123,13,33,9,First Cook
+124,13,26,21,Line Cook
+125,13,44,20,Pastry Chef
+126,13,54,30,Grill Cook
+127,13,35,10,Sauce Chef
+128,13,38,7,Fish Chef
+129,13,3,8,Vegetable Chef
+130,13,7,2,Roundsman
+131,14,21,4,Chef
+132,14,45,3,Sous Chef
+133,14,19,1,First Cook
+134,14,36,6,Line Cook
+135,14,9,7,Pastry Chef
+136,14,13,31,Grill Cook
+137,14,25,12,Sauce Chef
+138,14,48,24,Fish Chef
+139,14,58,28,Vegetable Chef
+140,14,40,9,Roundsman
+141,15,10,17,Chef
+142,15,2,13,Sous Chef
+143,15,16,21,First Cook
+144,15,31,8,Line Cook
+145,15,55,30,Pastry Chef
+146,15,50,3,Grill Cook
+147,15,5,22,Sauce Chef
+148,15,30,12,Fish Chef
+149,15,27,2,Vegetable Chef
+150,15,57,9,Roundsman
+151,16,53,24,Chef
+152,16,47,20,Sous Chef
+153,16,33,19,First Cook
+154,16,28,7,Line Cook
+155,16,54,17,Pastry Chef
+156,16,59,18,Grill Cook
+157,16,29,9,Sauce Chef
+158,16,11,1,Fish Chef
+159,16,56,8,Vegetable Chef
+160,16,6,30,Roundsman
+161,17,48,10,Chef
+162,17,8,2,Sous Chef
+163,17,27,6,First Cook
+164,17,37,19,Line Cook
+165,17,12,21,Pastry Chef
+166,17,20,3,Grill Cook
+167,17,43,1,Sauce Chef
+168,17,5,24,Fish Chef
+169,17,55,31,Vegetable Chef
+170,17,22,13,Roundsman
+171,18,30,28,Chef
+172,18,59,4,Sous Chef
+173,18,26,33,First Cook
+174,18,40,10,Line Cook
+175,18,29,19,Pastry Chef
+176,18,1,17,Grill Cook
+177,18,48,7,Sauce Chef
+178,18,50,25,Fish Chef
+179,18,28,20,Vegetable Chef
+180,18,3,24,Roundsman
+181,19,49,30,Chef
+182,19,53,8,Sous Chef
+183,19,56,12,First Cook
+184,19,9,2,Line Cook
+185,19,51,17,Pastry Chef
+186,19,12,10,Grill Cook
+187,19,43,22,Sauce Chef
+188,19,60,13,Fish Chef
+189,19,24,1,Vegetable Chef
+190,19,10,21,Roundsman
+191,20,18,30,Chef
+192,20,33,4,Sous Chef
+193,20,4,7,First Cook
+194,20,22,9,Line Cook
+195,20,31,13,Pastry Chef
+196,20,42,2,Grill Cook
+197,20,48,17,Sauce Chef
+198,20,47,3,Fish Chef
+199,20,27,25,Vegetable Chef
+200,20,35,10,Roundsman
+201,21,8,8,Chef
+202,21,13,19,Sous Chef
+203,21,39,17,First Cook
+204,21,15,1,Line Cook
+205,21,19,7,Pastry Chef
+206,21,2,21,Grill Cook
+207,21,46,3,Sauce Chef
+208,21,17,13,Fish Chef
+209,21,41,18,Vegetable Chef
+210,21,45,30,Roundsman
+211,22,29,10,Chef
+212,22,33,4,Sous Chef
+213,22,39,19,First Cook
+214,22,56,2,Line Cook
+215,22,28,8,Pastry Chef
+216,22,43,30,Grill Cook
+217,22,13,7,Sauce Chef
+218,22,25,21,Fish Chef
+219,22,26,1,Vegetable Chef
+220,22,48,13,Roundsman
+221,23,20,30,Chef
+222,23,3,8,Sous Chef
+223,23,6,19,First Cook
+224,23,51,4,Line Cook
+225,23,53,2,Pastry Chef
+226,23,4,9,Grill Cook
+227,23,1,17,Sauce Chef
+228,23,11,3,Fish Chef
+229,23,7,21,Vegetable Chef
+230,23,45,10,Roundsman
+231,24,22,13,Chef
+232,24,12,17,Sous Chef
+233,24,54,30,First Cook
+234,24,2,8,Line Cook
+235,24,48,19,Pastry Chef
+236,24,18,4,Grill Cook
+237,24,14,2,Sauce Chef
+238,24,57,9,Fish Chef
+239,24,41,7,Vegetable Chef
+240,24,60,21,Roundsman
+241,25,30,3,Chef
+242,25,6,1,Sous Chef
+243,25,59,13,First Cook
+244,25,50,8,Line Cook
+245,25,58,19,Pastry Chef
+246,25,33,17,Grill Cook
+247,25,4,10,Sauce Chef
+248,25,25,30,Fish Chef
+249,25,35,2,Vegetable Chef
+250,25,32,9,Roundsman
+251,26,21,7,Chef
+252,26,22,21,Sous Chef
+253,26,37,3,First Cook
+254,26,31,30,Line Cook
+255,26,44,2,Pastry Chef
+256,26,12,8,Grill Cook
+257,26,43,19,Sauce Chef
+258,26,16,17,Fish Chef
+259,26,51,4,Vegetable Chef
+260,26,57,10,Roundsman
+261,27,8,1,Chef
+262,27,30,9,Sous Chef
+263,27,45,7,First Cook
+264,27,22,21,Line Cook
+265,27,5,3,Pastry Chef
+266,27,35,10,Grill Cook
+267,27,26,30,Sauce Chef
+268,27,24,2,Fish Chef
+269,27,13,17,Vegetable Chef
+270,27,10,19,Roundsman
+271,28,41,4,Chef
+272,28,50,8,Sous Chef
+273,28,9,9,First Cook
+274,28,33,7,Line Cook
+275,28,3,21,Pastry Chef
+276,28,42,2,Grill Cook
+277,28,6,17,Sauce Chef
+278,28,47,30,Fish Chef
+279,28,25,3,Vegetable Chef
+280,28,32,10,Roundsman
+281,29,17,13,Chef
+282,29,19,30,Sous Chef
+283,29,12,8,First Cook
+284,29,2,7,Line Cook
+285,29,22,4,Pastry Chef
+286,29,31,9,Grill Cook
+287,29,50,21,Sauce Chef
+288,29,5,2,Fish Chef
+289,29,35,17,Vegetable Chef
+290,29,7,3,Roundsman
+291,30,3,30,Chef
+292,30,13,8,Sous Chef
+293,30,56,7,First Cook
+294,30,12,4,Line Cook
+295,30,9,21,Pastry Chef
+296,30,33,2,Grill Cook
+297,30,29,9,Sauce Chef
+298,30,4,17,Fish Chef
+299,30,22,3,Vegetable Chef
+300,30,30,19,Roundsman
+301,31,18,13,Chef
+302,31,37,8,Sous Chef
+303,31,11,7,First Cook
+304,31,1,4,Line Cook
+305,31,24,21,Pastry Chef
+306,31,5,2,Grill Cook
+307,31,22,9,Sauce Chef
+308,31,20,17,Fish Chef
+309,31,44,3,Vegetable Chef
+310,31,26,19,Roundsman
+311,32,33,30,Chef
+312,32,36,8,Sous Chef
+313,32,8,7,First Cook
+314,32,37,4,Line Cook
+315,32,50,21,Pastry Chef
+316,32,53,2,Grill Cook
+317,32,11,9,Sauce Chef
+318,32,5,17,Fish Chef
+319,32,1,3,Vegetable Chef
+320,32,40,19,Roundsman
+321,33,22,13,Chef
+322,33,24,8,Sous Chef
+323,33,30,7,First Cook
+324,33,21,4,Line Cook
+325,33,2,21,Pastry Chef
+326,33,11,2,Grill Cook
+327,33,28,9,Sauce Chef
+328,33,50,17,Fish Chef
+329,33,41,3,Vegetable Chef
+330,33,7,19,Roundsman
+331,34,3,13,Chef
+332,34,45,30,Sous Chef
+333,34,14,8,First Cook
+334,34,29,7,Line Cook
+335,34,16,4,Pastry Chef
+336,34,55,21,Grill Cook
+337,34,7,2,Sauce Chef
+338,34,58,9,Fish Chef
+339,34,1,40,Sauce Chef
+340,34,17,52,Fish Chef
+341,35,50,17,Vegetable Chef
+342,35,10,3,Roundsman
+343,35,51,19,Chef
+344,35,39,30,Sous Chef
+345,35,1,8,First Cook
+346,35,9,7,Line Cook
+347,35,35,4,Pastry Chef
+348,35,17,21,Grill Cook
+349,35,52,2,Sauce Chef
+350,35,12,9,Fish Chef
+351,36,28,13,Vegetable Chef
+352,36,44,17,Roundsman
+353,36,32,3,Chef
+354,36,46,19,Sous Chef
+355,36,59,30,First Cook
+356,36,5,8,Line Cook
+357,36,6,7,Pastry Chef
+358,36,21,4,Grill Cook
+359,36,40,21,Sauce Chef
+360,36,41,2,Fish Chef
+361,37,43,9,Vegetable Chef
+362,37,24,19,Roundsman
+363,37,60,30,Chef
+364,37,31,8,Sous Chef
+365,37,54,7,First Cook
+366,37,7,4,Line Cook
+367,37,48,21,Pastry Chef
+368,37,36,2,Grill Cook
+369,37,4,9,Sauce Chef
+370,37,38,17,Fish Chef
+371,38,52,3,Vegetable Chef
+372,38,55,13,Roundsman
+373,38,50,19,Chef
+374,38,53,30,Sous Chef
+375,38,42,8,First Cook
+376,38,2,7,Line Cook
+377,38,39,4,Pastry Chef
+378,38,45,21,Grill Cook
+379,38,18,2,Sauce Chef
+380,38,12,9,Fish Chef
+381,39,57,17,Vegetable Chef
+382,39,10,3,Roundsman
+383,39,11,19,Chef
+384,39,49,30,Sous Chef
+385,39,40,8,First Cook
+386,39,44,7,Line Cook
+387,39,6,4,Pastry Chef
+388,39,29,21,Grill Cook
+389,39,28,2,Sauce Chef
+390,39,32,9,Fish Chef
+391,40,25,17,Vegetable Chef
+392,40,35,3,Roundsman
+393,40,46,19,Chef
+394,40,15,30,Sous Chef
+395,40,33,8,First Cook
+396,40,36,7,Line Cook
+397,40,54,4,Pastry Chef
+398,40,43,21,Grill Cook
+399,40,23,2,Sauce Chef
+400,40,5,9,Fish Chef
+401,41,56,17,Vegetable Chef
+402,41,20,3,Roundsman
+403,41,48,19,Chef
+404,41,22,30,Sous Chef
+405,41,50,8,First Cook
+406,41,41,7,Line Cook
+407,41,8,4,Pastry Chef
+408,41,34,21,Grill Cook
+409,41,13,2,Sauce Chef
+410,41,58,9,Fish Chef
+411,42,31,17,Vegetable Chef
+412,42,29,3,Roundsman
+413,42,51,19,Chef
+414,42,18,30,Sous Chef
+415,42,38,8,First Cook
+416,42,4,7,Line Cook
+417,42,30,4,Pastry Chef
+418,42,3,21,Grill Cook
+419,42,24,2,Sauce Chef
+420,42,19,9,Fish Chef
+421,43,16,17,Vegetable Chef
+422,43,46,3,Roundsman
+423,43,40,19,Chef
+424,43,11,30,Sous Chef
+425,43,59,8,First Cook
+426,43,25,7,Line Cook
+427,43,27,4,Pastry Chef
+428,43,44,21,Grill Cook
+429,43,39,2,Sauce Chef
+430,43,42,9,Fish Chef
+431,44,13,17,Vegetable Chef
+432,44,15,3,Roundsman
+433,44,9,19,Chef
+434,44,10,30,Sous Chef
+435,44,5,8,First Cook
+436,44,55,7,Line Cook
+437,44,7,4,Pastry Chef
+438,44,33,21,Grill Cook
+439,44,50,2,Sauce Chef
+440,44,35,9,Fish Chef
+441,45,52,17,Vegetable Chef
+442,45,52,17,Vegetable Chef
+443,45,51,3,Roundsman
+444,45,31,19,Chef
+445,45,58,30,Sous Chef
+446,45,54,8,First Cook
+447,45,24,7,Line Cook
+448,45,37,4,Pastry Chef
+449,45,29,21,Grill Cook
+450,45,30,2,Sauce Chef
+451,46,28,17,Vegetable Chef
+452,46,6,3,Roundsman
+453,46,59,19,Chef
+454,46,53,30,Sous Chef
+455,46,57,8,First Cook
+456,46,23,7,Line Cook
+457,46,60,4,Pastry Chef
+458,46,2,21,Grill Cook
+459,46,27,2,Sauce Chef
+460,46,4,9,Fish Chef
+461,47,17,17,Vegetable Chef
+462,47,14,3,Roundsman
+463,47,10,19,Chef
+464,47,36,30,Sous Chef
+465,47,47,8,First Cook
+466,47,39,7,Line Cook
+467,47,34,4,Pastry Chef
+468,47,8,21,Grill Cook
+469,47,50,2,Sauce Chef
+470,47,16,9,Fish Chef
+471,48,24,17,Vegetable Chef
+472,48,5,3,Roundsman
+473,48,35,19,Chef
+474,48,33,30,Sous Chef
+475,48,51,8,First Cook
+476,48,25,7,Line Cook
+477,48,56,4,Pastry Chef
+478,48,31,21,Grill Cook
+479,48,3,2,Sauce Chef
+480,48,41,9,Fish Chef
+481,49,13,17,Vegetable Chef
+482,49,57,3,Roundsman
+483,49,21,19,Chef
+484,49,60,30,Sous Chef
+485,49,20,8,First Cook
+486,49,26,7,Line Cook
+487,49,53,4,Pastry Chef
+488,49,49,21,Grill Cook
+489,49,42,2,Sauce Chef
+490,49,19,9,Fish Chef
+491,50,39,17,Vegetable Chef
+492,50,12,3,Roundsman
+493,50,7,19,Chef
+494,50,6,30,Sous Chef
+495,50,43,8,First Cook
+496,50,29,7,Line Cook
+497,50,46,4,Pastry Chef
+498,50,28,21,Grill Cook
+499,50,11,2,Sauce Chef
+500,50,45,9,Fish Chef

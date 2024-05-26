@@ -19,14 +19,23 @@ CREATE TABLE IF NOT EXISTS `Recipe` (
                                         `NationalCuisine` varchar(255) DEFAULT '255',
                                         `DifficultyLevel` int,
                                         `MealTypes` varchar(255) DEFAULT '255',
-                                        `Tags` text,
-                                        `Tips` text,
+                                        `Tip1` text NULL ,
+                                        `Tip2` text NULL,
+                                        `Tip3` text NULL,
                                         `PreparationTime` int,
                                         `CookingTime` int,
                                         `MainIngredientID` int,
                                         `NutritionalInfoID` int,
                                         PRIMARY KEY (`RecipeID`)
 );
+
+CREATE TABLE IF NOT EXISTS `Tags` (
+                                        `tagID` int NOT NULL DEFAULT '0',
+                                        `RecipeID` int NOT NULL DEFAULT '0',
+                                        `Tag` text,
+                                        PRIMARY KEY (`tagID`)
+);
+
 
 CREATE TABLE IF NOT EXISTS `Step` (
                                       `StepID` int NOT NULL DEFAULT '0',
@@ -51,11 +60,12 @@ CREATE TABLE IF NOT EXISTS `FoodGroup` (
 );
 
 CREATE TABLE IF NOT EXISTS `RecipeIngredient` (
+                                                  `iID` int,
                                                   `RecipeID` int NOT NULL,
                                                   `IngredientID` int,
                                                   `Quantity` varchar(255) DEFAULT '255',
                                                   `Unit` varchar(255) DEFAULT '255',
-                                                  PRIMARY KEY (`RecipeID`)
+                                                  PRIMARY KEY (`iID`)
 );
 
 CREATE TABLE IF NOT EXISTS `Equipment` (
@@ -66,9 +76,10 @@ CREATE TABLE IF NOT EXISTS `Equipment` (
 );
 
 CREATE TABLE IF NOT EXISTS `RecipeEquipment` (
+                                                 `eID` int NOT NULL,
                                                  `RecipeID` int NOT NULL,
                                                  `EquipmentID` int,
-                                                 PRIMARY KEY (`RecipeID`)
+                                                 PRIMARY KEY (`eID`)
 );
 
 CREATE TABLE IF NOT EXISTS `NutritionalInfo` (
@@ -88,9 +99,10 @@ CREATE TABLE IF NOT EXISTS `ThematicUnit` (
 );
 
 CREATE TABLE IF NOT EXISTS `RecipeThematicUnit` (
+                                                    `rID` int NOT NULL,
                                                     `RecipeID` int NOT NULL,
                                                     `ThematicUnitID` int,
-                                                    PRIMARY KEY (`RecipeID`)
+                                                    PRIMARY KEY (`rID`)
 );
 
 CREATE TABLE IF NOT EXISTS `Cook` (
@@ -114,19 +126,21 @@ CREATE TABLE IF NOT EXISTS `Episode` (
 );
 
 CREATE TABLE IF NOT EXISTS `EpisodeParticipation` (
+                                                      `pID` int NOT NULL,
                                                       `EpisodeID` int NOT NULL,
                                                       `CookID` int,
                                                       `RecipeID` int,
                                                       `Role` varchar(255) DEFAULT 'Assistant',
-                                                      PRIMARY KEY (`EpisodeID`)
+                                                      PRIMARY KEY (`pID`)
 );
 
 CREATE TABLE IF NOT EXISTS `Score` (
+                                       `ID` int,
                                        `EpisodeID` int NOT NULL,
                                        `CookID` int,
                                        `JudgeID` int,
                                        `Score` int,
-                                       PRIMARY KEY (`EpisodeID`)
+                                       PRIMARY KEY (`ID`)
 );
 
 CREATE TABLE IF NOT EXISTS `Image` (
@@ -167,6 +181,8 @@ ALTER TABLE `Score` ADD CONSTRAINT `Score_fk0` FOREIGN KEY (`EpisodeID`) REFEREN
 ALTER TABLE `Score` ADD CONSTRAINT `Score_fk1` FOREIGN KEY (`CookID`) REFERENCES `Cook`(`CookID`);
 
 ALTER TABLE `Score` ADD CONSTRAINT `Score_fk2` FOREIGN KEY (`JudgeID`) REFERENCES `Cook`(`CookID`);
+
+ALTER TABLE `Tags` ADD CONSTRAINT `Tags_fk1` FOREIGN KEY (`RecipeID`) REFERENCES `Recipe`(`RecipeID`);
 
 
 CREATE INDEX idx_username ON User (Username);

@@ -93,6 +93,13 @@ USE dummy1;
     LINES TERMINATED BY '\n'
     IGNORE 1 ROWS;
 
+    LOAD DATA LOCAL INFILE '/tmp/tags.csv'
+    INTO TABLE Tags
+    FIELDS TERMINATED BY ','
+    ENCLOSED BY '"'
+    LINES TERMINATED BY '\n'
+    IGNORE 1 ROWS;
+
     LOAD DATA LOCAL INFILE '/tmp/episodeparticipations.csv'
     INTO TABLE EpisodeParticipation
     FIELDS TERMINATED BY ','
