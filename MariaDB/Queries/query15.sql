@@ -15,4 +15,3 @@ WHERE
                 JOIN
             Ingredient i ON ri.IngredientID = i.IngredientID
     );
-

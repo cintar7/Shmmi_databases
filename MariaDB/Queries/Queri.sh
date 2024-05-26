@@ -34,7 +34,7 @@ query_files=(
     "/tmp/Queries/query12.sql"
     "/tmp/Queries/query13.sql"
     "/tmp/Queries/query14.sql"
-    "/tmp/Queries/query14.sql"
+    "/tmp/Queries/query15.sql"
 )
 
 # Run queries
