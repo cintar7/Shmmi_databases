@@ -1,19 +1,52 @@
-RecipeID,Name,Description,NationalCuisine,DifficultyLevel,MealTypes,Tags,Tips,PreparationTime,CookingTime,MainIngredientID,NutritionalInfoID
-40,Recipe40,Description40,Mexican,1,Dinner,Tag40,Tip40,200,240,40,40
-41,Recipe41,Description41,Mexican,2,Lunch,Tag41,Tip41,205,246,41,41
-42,Recipe42,Description42,Mexican,3,Lunch,Tag42,Tip42,210,252,42,42
-43,Recipe43,Description43,Mexican,4,Lunch,Tag43,Tip43,215,258,43,43
-44,Recipe44,Description44,Mexican,5,Dinner,Tag44,Tip44,220,264,44,44
-45,Recipe45,Description45,Mexican,1,Lunch,Tag45,Tip45,225,270,45,45
-46,Recipe46,Description46,Italian,2,Lunch,Tag46,Tip46,230,276,46,46
-47,Recipe47,Description47,Italian,3,Lunch,Tag47,Tip47,235,282,47,47
-48,Recipe48,Description48,Italian,4,Dinner,Tag48,Tip48,240,288,48,48
-49,Recipe49,Description49,Italian,5,Lunch,Tag49,Tip49,245,294,49,49
-50,Recipe50,Description50,Italian,1,Lunch,Tag50,Tip50,250,300,50,50
-51,Recipe51,Description48,Chinese,4,Brunch,Tag48,Tip48,240,288,48,48
-52,Recipe52,Description49,Chinese,5,Brunch,Tag48,Tip49,245,294,49,49
-53,Recipe53,Description50,Chinese,1,Brunch,Tag50,Tip50,250,300,50,50
-54,Recipe54,Description48,Chinese,4,Brunch,Tag48,Tip48,240,288,48,48
-55,Recipe55,Description49,Chinese,5,Breakfast,Tag48,Tip49,245,294,49,49
-56,Recipe56,Description50,Chinese,1,Breakfast,Tag50,Tip50,250,300,50,50
-
+RecipeID,Name,Description,NationalCuisine,DifficultyLevel,MealTypes,Tip1,Tip2,Tip3,PreparationTime,CookingTime,MainIngredientID,NutritionalInfoID,PreparationTime,CookingTime,MainIngredientID,NutritionalInfoID
+1,Pizza,Tasty and fatty,Italian,2,Dinner,Put much cheese,Dummy tip 2 for recipe 1,Dummy tip 3 for recipe 1,60,30,8,1,60,30,8,1
+2,Carbonara,Pasta with cream,Italian,1,Lunch,You can use egg instead of cream,Dummy tip 2 for recipe 2,Dummy tip 3 for recipe 2,10,20,24,2,10,20,24,2
+3,Arancini,Risotto deep fried balls,Italian,4,Lunch,Eat them hot,Dummy tip 2 for recipe 3,Dummy tip 3 for recipe 3,30,10,26,3,30,10,26,3
+4,Tacos,Hard tortilla shells with fillings,Mexican,3,Dinner,Do not let them get soggy,Dummy tip 2 for recipe 4,,50,20,8,4,50,20,8,4
+5,Chimichangas,Deep fried burrito,Mexican,5,Lunch,Eat it hot,Dummy tip 2 for recipe 5,Dummy tip 3 for recipe 5,30,25,2,5,30,25,2,5
+6,Burger,Beef patty with bun,American,2,Dinner,Add bacon for extra flavor,Dummy tip 2 for recipe 6,Dummy tip 3 for recipe 6,15,10,3,6,15,10,3,6
+7,Sushi,Rice with raw fish,Japanese,3,Lunch,Use fresh fish,Dummy tip 2 for recipe 7,,40,0,39,7,40,0,39,7
+8,Paella,Seafood rice,Spanish,4,Dinner,Use saffron for authentic flavor,Dummy tip 2 for recipe 8,Dummy tip 3 for recipe 8,60,30,30,8,60,30,30,8
+9,Falafel,Chickpea balls,Middle Eastern,3,Lunch,Fry them until crispy,,,30,10,71,9,30,10,71,9
+10,Shawarma,Spiced meat wrap,Middle Eastern,2,Dinner,Add pickles and tahini sauce,Dummy tip 2 for recipe 10,Dummy tip 3 for recipe 10,20,15,20,10,20,15,20,10
+11,Ratatouille,Vegetable stew,French,2,Dinner,Layer vegetables neatly,Dummy tip 2 for recipe 11,Dummy tip 3 for recipe 11,50,30,90,11,50,30,90,11
+12,Quiche,Egg and cheese pie,French,3,Lunch,Use cream for richness,Dummy tip 2 for recipe 12,Dummy tip 3 for recipe 12,40,25,23,12,40,25,23,12
+13,Pad Thai,Stir-fried noodles,Thai,3,Dinner,Add peanuts and lime,Dummy tip 2 for recipe 13,Dummy tip 3 for recipe 13,25,10,24,13,25,10,24,13
+14,Tom Yum,Spicy soup,Thai,4,Lunch,Use fresh lemongrass,Dummy tip 2 for recipe 14,Dummy tip 3 for recipe 14,30,20,32,14,30,20,32,14
+15,Poutine,Fries with gravy,Canadian,2,Dinner,Use cheese curds,Dummy tip 2 for recipe 15,Dummy tip 3 for recipe 15,15,5,6,15,15,5,6,15
+16,Kimchi,Spicy fermented cabbage,Korean,2,Side dish,Let it ferment for days,,,60,0,121,16,60,0,121,16
+17,Bibimbap,Mixed rice bowl,Korean,3,Lunch,Mix well before eating,Dummy tip 2 for recipe 17,Dummy tip 3 for recipe 17,40,10,26,17,40,10,26,17
+18,Moussaka,Layered eggplant dish,Greek,4,Dinner,Let it set before serving,Dummy tip 2 for recipe 18,Dummy tip 3 for recipe 18,70,40,7,18,70,40,7,18
+19,Gyro,Meat wrap,Greek,2,Lunch,Serve with tzatziki,Dummy tip 2 for recipe 19,,30,15,3,19,30,15,3,19
+20,Butter Chicken,Chicken in creamy sauce,Indian,3,Dinner,Use ghee for richness,Dummy tip 2 for recipe 20,Dummy tip 3 for recipe 20,50,30,2,20,50,30,2,20
+21,Palak Paneer,Spinach with cheese,Indian,2,Lunch,Use fresh paneer,Dummy tip 2 for recipe 21,Dummy tip 3 for recipe 21,40,20,34,21,40,20,34,21
+22,Currywurst,Sausage with curry sauce,German,2,Snack,Serve with fries,Dummy tip 2 for recipe 22,Dummy tip 3 for recipe 22,15,10,3,22,15,10,3,22
+23,Sauerbraten,Marinated pot roast,German,4,Dinner,Marinate for several days,Dummy tip 2 for recipe 23,Dummy tip 3 for recipe 23,120,180,3,23,120,180,3,23
+24,Dim Sum,Various small dishes,Chinese,3,Lunch,Serve with tea,Dummy tip 2 for recipe 24,Dummy tip 3 for recipe 24,90,20,30,24,90,20,30,24
+25,Peking Duck,Roast duck with pancakes,Chinese,5,Dinner,Carve at the table,Dummy tip 2 for recipe 25,Dummy tip 3 for recipe 25,120,90,63,25,120,90,63,25
+26,Feijoada,Black bean stew,Brazilian,3,Dinner,Serve with rice and oranges,Dummy tip 2 for recipe 26,,60,120,72,26,60,120,72,26
+27,Brigadeiro,Chocolate truffle,Brazilian,1,Dessert,Roll in sprinkles,Dummy tip 2 for recipe 27,Dummy tip 3 for recipe 27,15,10,18,27,15,10,18,27
+28,Ceviche,Marinated raw fish,Peruvian,2,Appetizer,Use fresh lime juice,Dummy tip 2 for recipe 28,Dummy tip 3 for recipe 28,20,0,39,28,20,0,39,28
+29,Lomo Saltado,Beef stir-fry,Peruvian,3,Dinner,Serve with rice and fries,Dummy tip 2 for recipe 29,Dummy tip 3 for recipe 29,30,20,3,29,30,20,3,29
+30,Adobo,Marinated meat stew,Filipino,3,Dinner,Use coconut vinegar,Dummy tip 2 for recipe 30,Dummy tip 3 for recipe 30,50,60,2,30,50,60,2,30
+31,Lechon,Roast pig,Filipino,5,Dinner,Turn frequently while roasting,Dummy tip 2 for recipe 31,Dummy tip 3 for recipe 31,240,180,20,31,240,180,20,31
+32,Kebab,Grilled meat skewer,Turkish,3,Dinner,Serve with flatbread,Dummy tip 2 for recipe 32,Dummy tip 3 for recipe 32,30,15,3,32,30,15,3,32
+33,Baklava,Sweet pastry,Turkish,4,Dessert,Use plenty of syrup,Dummy tip 2 for recipe 33,Dummy tip 3 for recipe 33,60,30,134,33,60,30,134,33
+34,Goulash,Meat stew,Hungarian,3,Dinner,Use paprika generously,Dummy tip 2 for recipe 34,Dummy tip 3 for recipe 34,90,120,3,34,90,120,3,34
+35,Dobos Torte,Layered cake,Hungarian,5,Dessert,Caramelize the top layer,Dummy tip 2 for recipe 35,Dummy tip 3 for recipe 35,180,30,134,35,180,30,134,35
+36,Shepherd's Pie,Meat and potato pie,British,3,Dinner,Top with mashed potatoes,Dummy tip 2 for recipe 36,Dummy tip 3 for recipe 36,60,45,3,36,60,45,3,36
+37,Fish and Chips,Fried fish with fries,British,2,Dinner,Serve with malt vinegar,Dummy tip 2 for recipe 37,Dummy tip 3 for recipe 37,30,15,39,37,30,15,39,37
+38,Borscht,Beet soup,Russian,2,Lunch,Serve with sour cream,Dummy tip 2 for recipe 38,Dummy tip 3 for recipe 38,40,60,102,38,40,60,102,38
+39,Blini,Thin pancakes,Russian,1,Breakfast,Serve with caviar or jam,Dummy tip 2 for recipe 39,Dummy tip 3 for recipe 39,20,10,8,39,20,10,8,39
+40,Laksa,Spicy noodle soup,Malaysian,4,Dinner,Use fresh coconut milk,Dummy tip 2 for recipe 40,Dummy tip 3 for recipe 40,40,20,30,40,40,20,30,40
+41,Nasi Goreng,Fried rice,Indonesian,2,Lunch,Top with fried egg,Dummy tip 2 for recipe 41,Dummy tip 3 for recipe 41,20,10,26,41,20,10,26,41
+42,Satay,Grilled meat skewers,Indonesian,3,Appetizer,Serve with peanut sauce,Dummy tip 2 for recipe 42,Dummy tip 3 for recipe 42,30,10,3,42,30,10,3,42
+43,Pavlova,Merengue dessert,Australian,4,Dessert,Top with fresh fruit,Dummy tip 2 for recipe 43,Dummy tip 3 for recipe 43,60,90,134,43,60,90,134,43
+44,Meat Pie,Pastry filled with meat,Australian,3,Lunch,Serve with tomato sauce,Dummy tip 2 for recipe 44,Dummy tip 3 for recipe 44,40,30,3,44,40,30,3,44
+45,Hummus,Chickpea dip,Middle Eastern,1,Appetizer,Drizzle with olive oil,Dummy tip 2 for recipe 45,Dummy tip 3 for recipe 45,15,0,71,45,15,0,71,45
+46,Shakshuka,Poached eggs in tomato sauce,Middle Eastern,2,Breakfast,Serve with crusty bread,Dummy tip 2 for recipe 46,Dummy tip 3 for recipe 46,30,15,1,46,30,15,1,46
+47,Fajitas,Grilled meat with peppers,Mexican,3,Dinner,Serve with tortillas,Dummy tip 2 for recipe 47,Dummy tip 3 for recipe 47,30,15,3,47,30,15,3,47
+48,Burrito,Stuffed tortilla,Mexican,2,Lunch,Wrap tightly,Dummy tip 2 for recipe 48,Dummy tip 3 for recipe 48,20,10,3,48,20,10,3,48
+49,Ramen,Noodle soup,Japanese,3,Dinner,Use fresh noodles,Dummy tip 2 for recipe 49,Dummy tip 3 for recipe 49,40,20,24,49,40,20,24,49
+50,Tempura,Battered and fried seafood,Japanese,4,Appetizer,Serve with dipping sauce,Dummy tip 2 for recipe 50,Dummy tip 3 for recipe 50,30,15,39,50,30,15,39,50
+51,Mochi,Glutinous rice cake,Japanese,2,Dessert,Fill with sweet red bean paste,Dummy tip 2 for recipe 51,Dummy tip 3 for recipe 51,20,0,8,51,20,0,8,51

@@ -31,6 +31,7 @@ COPY MariaDB/DATA/steps.csv /tmp/
 COPY MariaDB/DATA/thematicunits.csv /tmp/
 COPY MariaDB/DATA/users.csv /tmp/
 COPY MariaDB/DATA/nutritionalinfo.csv /tmp/
+COPY MariaDB/DATA/tags.csv /tmp/
 COPY MariaDB/01_grant_permissions.sql /docker-entrypoint-initdb.d/
 COPY MariaDB/02_db.sql /docker-entrypoint-initdb.d/
 COPY MariaDB/03_populate.sql /docker-entrypoint-initdb.d/
