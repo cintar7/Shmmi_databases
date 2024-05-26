@@ -148,7 +148,8 @@ CREATE TABLE IF NOT EXISTS `Image` (
                                        `ImageID` int NOT NULL DEFAULT '0',
                                        `EntityType` varchar(255) DEFAULT '255',
                                        `EntityID` int,
-                                       `ImagePath` varchar(255) DEFAULT '255'
+                                       `ImagePath` varchar(255) DEFAULT '255',
+                                       `Description` text
 );
 
 
