@@ -1,0 +1,67 @@
+tagID,RecipeID,Tag
+1,1,Fast food
+2,1,Snack
+3,1,Main course
+4,2,Pasta
+5,2,Lunch
+6,3,Lunch
+7,3,Appetizer
+8,4,Dinner
+9,5,Lunch
+10,6,Fast food
+11,6,Dinner
+12,7,Lunch
+13,7,Appetizer
+14,8,Dinner
+15,9,Lunch
+16,10,Dinner
+17,11,Dinner
+18,12,Lunch
+19,13,Dinner
+20,14,Lunch
+21,15,Dinner
+22,16,Side dish
+23,17,Lunch
+24,18,Dinner
+25,19,Lunch
+26,20,Dinner
+27,21,Lunch
+28,22,Snack
+29,23,Dinner
+30,24,Lunch
+31,25,Dinner
+32,26,Dinner
+33,27,Dessert
+34,28,Appetizer
+35,29,Dinner
+36,30,Dinner
+37,31,Dinner
+38,32,Dinner
+39,33,Dessert
+40,34,Dinner
+41,35,Dessert
+42,36,Dinner
+43,37,Dinner
+44,38,Lunch
+45,39,Breakfast
+46,40,Dinner
+47,41,Lunch
+48,42,Appetizer
+49,43,Dessert
+50,44,Lunch
+51,45,Appetizer
+52,46,Breakfast
+53,47,Dinner
+54,48,Lunch
+55,49,Dinner
+56,49,Lunch
+57,49,Soup
+58,49,Snack
+59,50,Appetizer
+60,50,Side dish
+61,50,Lunch
+62,51,Snack
+63,51,Side dish
+64,51,Dinner
+65,51,Fast food
+66,51,Dessert
