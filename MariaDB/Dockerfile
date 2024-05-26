@@ -35,11 +35,17 @@ COPY MariaDB/DATA/tags.csv /tmp/
 COPY MariaDB/01_grant_permissions.sql /docker-entrypoint-initdb.d/
 COPY MariaDB/02_db.sql /docker-entrypoint-initdb.d/
 COPY MariaDB/03_populate.sql /docker-entrypoint-initdb.d/
+COPY MariaDB/05_queries.sql /docker-entrypoint-initdb.d/
+RUN mkdir -p /tmp/Queries/
+COPY MariaDB/Queries/* /tmp/Queries/
+
 # Grant permissions during container initialization
 RUN chmod +rx /tmp/*.csv
 RUN chmod +rx /docker-entrypoint-initdb.d/01_grant_permissions.sql
 RUN chmod +rx /docker-entrypoint-initdb.d/02_db.sql
 RUN chmod +rx /docker-entrypoint-initdb.d/03_populate.sql
+RUN chmod +rx /docker-entrypoint-initdb.d/05_queries.sql
+RUN chmod +rx /tmp/Queries/*
 
 # Expose port 3306
 EXPOSE 3306
@@ -50,6 +56,7 @@ RUN service mysql start && \
     mysql -u root -proot < /docker-entrypoint-initdb.d/01_grant_permissions.sql && \
     mysql --local-infile=1 -u root -proot < /docker-entrypoint-initdb.d/02_db.sql && \
     mysql --local-infile=1 -u root -proot < /docker-entrypoint-initdb.d/03_populate.sql && \
+    bash /tmp/Queries/Queri.sh &&\
     service mysql stop
 # Start MariaDB server
 CMD ["bash", "-c", "/usr/local/bin/setup-mariadb.sh && mysqld"]
